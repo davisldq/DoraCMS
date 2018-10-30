@@ -2,8 +2,22 @@ import Axios from "axios";
 
 export function reqJsonData(url, params = {}, method = 'post') {
     if (method === 'get') {
+        var getinfo=Axios.get('/' + url, { params }).then(function(response){
+            console.log(response);//请求正确时执行的代码
+            console.log('get response data.data:')
+            console.log(response.data.data)
+        }).catch(function(response){
+            console.log(response);//发生错误时执行的代码
+        })
         return Axios.get('/' + url, { params })
     } else if (method === 'post') {
+        var getinfo=Axios.get('/' + url, { params }).then(function(response){
+            console.log(response);//请求正确时执行的代码
+            console.log('get response data.data:')
+            console.log(response.data.data)
+        }).catch(function(response){
+            console.log(response);//发生错误时执行的代码
+        })
         return Axios.post('/' + url, params)
     }
 
