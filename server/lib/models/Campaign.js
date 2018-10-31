@@ -50,7 +50,7 @@ var ContentSchema = new Schema({
     translate: { type: String, default: '' }, //推特翻译
     twiterAuthor: { type: String, default: '' } //推特作者
 
-});
+},{collection:'campaignss'});
 
 
 ContentSchema.set('toJSON', { getters: true, virtuals: true });
