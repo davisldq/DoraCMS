@@ -8,6 +8,7 @@ const {
   AdminResource,
   ContentCategory,
   Content,
+    Campaign,// ldqadd
   ContentTag,
   User,
   Message,
@@ -76,7 +77,7 @@ router.get('/adminGroup/deleteGroup', authToken, authPower, AdminGroup.delAdminG
 
 /**
  * 资源管理
- * 
+ *
  */
 
 router.get('/adminResource/getList', authToken, authPower, AdminResource.getAdminResources)
@@ -98,7 +99,7 @@ router.post('/systemConfig/updateConfig', authToken, authPower, SystemConfig.upd
 
 /**
  * 文档类别管理
- * 
+ *
  */
 
 router.get('/contentCategory/getList', authToken, authPower, ContentCategory.getContentCategories)
@@ -111,7 +112,7 @@ router.get('/contentCategory/deleteCategory', authToken, authPower, ContentCateg
 
 /**
  * 文档管理
- * 
+ *
  */
 
 router.get('/content/getList', authToken, authPower, Content.getContents)
@@ -124,6 +125,12 @@ router.post('/content/updateOne', authToken, authPower, Content.updateContent)
 
 router.get('/content/deleteContent', authToken, authPower, Content.delContent)
 
+/**
+ * 活动管理
+ *
+ */
+
+router.get('/campaign/getList', authToken, authPower, Campaign.getCampaign)
 /**
  * tag管理
  */

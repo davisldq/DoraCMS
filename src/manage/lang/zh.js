@@ -147,7 +147,20 @@ export default {
     userManage: "会员管理",
     regUserFunction: "会员管理",
     getUserInfo: "查看会员",
-    delUserInfo: "删除会员"
+    delUserInfo: "删除会员",
+      campaignManage: "活动管理",// ldqadd
+      getCampaignList: "获取活动列表",
+      delCampaign: "删除活动",
+      campaignCategoryManage: "campaign class management",
+      getCampaignCategoryList: "Get campaign categories",
+      delCampaignCategory: "Delete classification function",
+      addCampaignCategory: "Add campaign categories",
+      updateCampaignCategory: "Update classification",
+      addCampaignFunction: "New campaign",
+      addCampaignItem: "Add new campaign item",
+      editCampaignFunction: "Campaign editing page",
+      updateCampaignItem: "Update campaign",
+      getCampaignItem: "Get a single campaign item"
   },
   navbar: {
     logOut: '退出登录',

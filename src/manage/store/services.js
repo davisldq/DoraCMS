@@ -159,6 +159,10 @@ export default {
     contentList(params) {
         return reqJsonData('manage/content/getList', params, 'get')
     },
+    campaignList(params) { //ldqadd
+        //return reqJsonData('manage/content/getList', params, 'get')
+       return reqJsonData('manage/campaign/getList', params, 'get')
+    },
 
     getOneContent(params) {
         return reqJsonData('manage/content/getContent', params, 'get')

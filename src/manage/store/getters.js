@@ -30,6 +30,7 @@ const getters = {
   contentCategoryList: state => state.app.contentCategory.categoryList,
   contentFormState: state => state.app.content.formState,
   contentList: state => state.app.content.contentList,
+    campaignList: state => state.app.campaign.campaignList,
   contentTagFormState: state => state.app.contentTag.formState,
   contentTagList: state => state.app.contentTag.tagList,
   contentMessageFormState: state => state.app.contentMessage.formState,

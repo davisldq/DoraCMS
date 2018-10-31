@@ -243,6 +243,45 @@ const app = {
         err: {}
       }
     },
+      campaign: { //ldqadd
+          formState: {
+              edit: false,
+              formData: {
+                  title: '',
+                  stitle: '',
+                  type: '1',
+                  categories: [],
+                  sortPath: '',
+                  tags: [],
+                  keywords: '',
+                  sImg: '/upload/images/defaultImg.jpg',
+                  discription: '',
+                  author: {},
+                  uAuthor: '',
+                  markDownComments: '',
+                  state: true,
+                  isTop: 0,
+                  clickNum: 0,
+                  comments: '',
+                  commentNum: 0,
+                  likeNum: 0,
+                  likeUserIds: '',
+                  from: '1',
+                  postValue: 3,
+                  translate: '',
+                  twiterAuthor: ''
+
+              }
+          },
+          campaignList: {
+              pageInfo: {},
+              docs: []
+          },
+          addCampaign: {
+              state: '',
+              err: {}
+          }
+      },
     contentTag: {
       formState: {
         show: false,
@@ -579,6 +618,9 @@ const app = {
     [types.CONTENT_LIST](state, contentList) {
       state.content.contentList = contentList
     },
+      [types.CAMPAIGN_LIST](state, campaignList) {
+          state.campaign.campaignList = campaignList
+      },
     [types.CONTENT_ONE](state, content) {
       state.content.content = content
     },
@@ -943,6 +985,11 @@ const app = {
         commit(types.CONTENT_LIST, result.data.data)
       })
     },
+      getCampaignList({commit}, params = {}) {
+          services.campaignList(params).then((result) => {
+              commit(types.CAMPAIGN_LIST, result.data.data)
+          })
+      },
 
     getOneContent({
       commit

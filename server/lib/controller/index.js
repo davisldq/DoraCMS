@@ -3,6 +3,7 @@ exports.AdminGroup = require('./adminGroup');
 exports.AdminResource = require('./adminResource');
 exports.ContentCategory = require('./contentCategory');
 exports.Content = require('./content');
+exports.Campaign = require('./campaign');
 exports.ContentTag = require('./contentTag');
 exports.Message = require('./message');
 exports.UserNotify = require('./userNotify');

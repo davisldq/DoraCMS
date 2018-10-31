@@ -31,6 +31,7 @@ exports.AdminGroup = require('./AdminGroup');
 exports.AdminResource = require('./AdminResource');
 exports.ContentCategory = require('./ContentCategory');
 exports.Content = require('./Content');
+exports.Campaign = require('./Campaign');// ldqadd
 exports.ContentTag = require('./ContentTag');
 exports.Message = require('./Message');
 exports.UserNotify = require('./UserNotify');

@@ -1,6 +1,6 @@
 /**
  * api
- * 
+ *
  */
 const express = require('express')
 const router = express.Router()
@@ -14,7 +14,7 @@ const {
 } = require('../../utils');
 const authUser = require('../../utils/middleware/authUser');
 
-const { AdminUser, ContentCategory, Content, ContentTag, User, Message, SystemConfig, UserNotify, Ads } = require('../lib/controller');
+const { AdminUser, ContentCategory, Content,Campaign, ContentTag, User, Message, SystemConfig, UserNotify, Ads } = require('../lib/controller');
 const _ = require('lodash');
 const qr = require('qr-image')
 
@@ -55,6 +55,9 @@ router.post('/content/updateOne', checkUserSession, (req, res, next) => {
   next();
 }, Content.updateContent)
 
+
+// 查询活动列表 ldqadd
+router.get('/campaign/getList', (req, res, next) => { req.query.state = true; next() }, Campaign.getCampaign);
 
 //文章二维码生成
 router.get('/qrImg', (req, res, next) => {

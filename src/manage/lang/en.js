@@ -148,7 +148,20 @@ export default {
     userManage: "Member management",
     regUserFunction: "Member management",
     getUserInfo: "View members",
-    delUserInfo: "Delete members"
+    delUserInfo: "Delete members",
+      campaignManage: "campaign",//ldqadd
+      getCampaignList: "Get Campaign list",
+      delCampaign: "Delete campaign fock",
+      campaignCategoryManage: "campaign class management",
+      getCampaignCategoryList: "Get campaign categories",
+      delCampaignCategory: "Delete classification function",
+      addCampaignCategory: "Add campaign categories",
+      updateCampaignCategory: "Update classification",
+      addCampaignFunction: "New campaign",
+      addCampaignItem: "Add new campaign item",
+      editCampaignFunction: "Campaign editing page",
+      updateCampaignItem: "Update campaign",
+      getCampaignItem: "Get a single campaign item"
   },
   navbar: {
     logOut: 'Log Out',
