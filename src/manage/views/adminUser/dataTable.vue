@@ -18,6 +18,8 @@
                     <i :class="scope.row.enable ? 'fa fa-check-circle' : 'fa fa-minus-circle'" :style="scope.row.enable ? green : red"></i>
                 </template>
             </el-table-column>
+            <el-table-column prop="address" :label="$t('adminUser.lb_address')" show-overflow-tooltip>
+            </el-table-column>
             <el-table-column :label="$t('adminUser.lb_options')" width="150">
                 <template slot-scope="scope">
                     <el-button size="mini" type="primary" plain round @click="editUserInfo(scope.$index, dataList)"> <i class="fa fa-edit"></i></el-button>

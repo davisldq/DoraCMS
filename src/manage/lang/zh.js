@@ -317,6 +317,7 @@ export default {
     lb_enable: "是否有效",
     lb_comments: "备注",
     lb_options: "操作",
+      lb_address: "地址",
     scr_del_ask: "此操作将永久删除该用户, 是否继续?",
   },
   adminGroup: {

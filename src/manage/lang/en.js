@@ -318,6 +318,7 @@ export default {
     lb_enable: "Valid Format or Not",
     lb_comments: "note",
     lb_options: "Edit",
+      lb_address: "address",
     scr_del_ask: "You'll delete this user forever, continue?",
   },
   adminGroup: {

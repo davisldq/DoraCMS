@@ -12,7 +12,7 @@ var AdminUserSchema = new Schema({
     id: String,
     _id: {
         type: String,
-        
+
         'default': shortid.generate
     },
     name: String,
@@ -21,6 +21,7 @@ var AdminUserSchema = new Schema({
     email: String,
     phoneNum: Number,
     comments: String,
+    address: String,
     date: { type: Date, default: Date.now },
     logo: { type: String, default: "/upload/images/defaultlogo.png" },
     enable: { type: Boolean, default: false },

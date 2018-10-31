@@ -59,7 +59,7 @@ const app = {
           confirmPassword: '',
           group: '',
           email: '',
-          comments: '',
+          comments: '',address: '',
           phoneNum: ''
         }
       },

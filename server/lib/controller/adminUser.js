@@ -259,6 +259,7 @@ class AdminUser {
                     confirm: fields.confirm,
                     group: fields.group,
                     enable: fields.enable,
+                    address: fields.address,
                     comments: fields.comments
                 }
 
@@ -295,6 +296,7 @@ class AdminUser {
                     confirm: fields.confirm,
                     group: fields.group,
                     enable: fields.enable,
+                    address: fields.address,
                     comments: fields.comments
                 }
                 const item_id = fields._id;

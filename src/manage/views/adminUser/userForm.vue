@@ -28,6 +28,9 @@
                 <el-form-item :label="$t('adminUser.lb_enable')" prop="enable">
                     <el-switch :on-text="$t('main.radioOn')" :off-text="$t('main.radioOff')" v-model="dialogState.formData.enable"></el-switch>
                 </el-form-item>
+                <el-form-item :label="$t('adminUser.lb_address')" prop="comments">
+                    <el-input size="small" v-model.number="dialogState.formData.address"></el-input>
+                </el-form-item>
                 <el-form-item :label="$t('adminUser.lb_comments')" prop="comments">
                     <el-input size="small" type="textarea" v-model="dialogState.formData.comments"></el-input>
                 </el-form-item>
@@ -195,6 +198,23 @@ export default {
             trigger: "blur"
           }
         ],
+          address: [
+              {
+                  message: this.$t("validate.inputNull", {
+                      label: this.$t("adminUser.lb_address")
+                  }),
+                  trigger: "blur"
+              },
+              {
+                  min: 5,
+                  max: 30,
+                  message: this.$t("validate.ranglengthandnormal", {
+                      min: 5,
+                      max: 30
+                  }),
+                  trigger: "blur"
+              }
+          ],
         comments: [
           {
             message: this.$t("validate.inputNull", {
