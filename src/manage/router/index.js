@@ -53,7 +53,8 @@ export const constantRouterMap = [
     path: '/401',
     component: () => import('@/views/errorPage/401'),
     hidden: true
-  },
+  }
+  ,
   {
     path: '',
     component: Layout,
@@ -62,7 +63,8 @@ export const constantRouterMap = [
     children: [
       {
         path: 'dashboard',
-        component: () => import('@/views/dashboard/index'),
+         component: () => import('@/views/dashboard/index'),
+        //   component: () => import('@/views/campaign/index'),
         name: 'Dashboard',
         meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
       }
@@ -79,7 +81,7 @@ export default new Router({
 
 /**
  * 将一维的扁平数组转换为多层级对象
- * @param  {[type]} list 一维数组，数组中每一个元素需包含id和parentId两个属性 
+ * @param  {[type]} list 一维数组，数组中每一个元素需包含id和parentId两个属性
  * @return {[type]} tree 多层级树状结构
  */
 function buildTree(list) {

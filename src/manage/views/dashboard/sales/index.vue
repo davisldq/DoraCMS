@@ -16,7 +16,7 @@
       </el-col>
       <el-col :xs="{span: 24}" :sm="{span: 12}" :md="{span: 12}" :lg="{span: 7}" :xl="{span: 6}" style="margin-bottom:30px;">
         <box-card :basicInfo="basicInfo" @showMyResourceBox="showMyResource"/>
-      </el-col>
+      </el-col><h1>saler</h1>
     </el-row>
 
   </div>
@@ -33,7 +33,7 @@ import { renderTreeData } from "@/store/modules/app";
 import { mapGetters, mapActions } from "vuex";
 
 export default {
-  name: "DashboardAdmin",
+  name: "salesDashboard",
   components: {
     GithubCorner,
     PanelGroup,
@@ -56,10 +56,14 @@ export default {
     ...mapGetters(["basicInfo", "loginState"]),
     newSourceData() {
       return renderTreeData({ docs: this.basicInfo.resources });
+        // console.log('我的角色99999=' + this.loginState.userInfo.group.name);
+        // console.log('我的角色99999=' + this.basicInfo.resources)
     }
   },
   mounted() {
-    this.$store.dispatch("getSiteBasicInfo");
+    this.$store.dispatch("getSiteBasicInfo","loginState");
+    // console.log('我的角色99999=' + this.loginState.userInfo.group.name);
+    //   console.log('我的角色99999=' + JSON.stringify(renderTreeData({ docs: this.basicInfo.resources })))
   }
 };
 </script>
